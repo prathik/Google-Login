@@ -33,7 +33,7 @@ Open the config.php file
 
 2. Define **ONLY_AlLOW** with the domain name that you want to allow. For all Google users, change it to *@gmail.com* if you want to allow only  google apps specific users change it to *@yourdomain.com*.
 
-3. If you need a seperate base path, then change the **BASE_PATH**, generally no change is required for this.
+3. If you need a separate base path, then change the **BASE_PATH**, generally no change is required for this.
 
 Edit login-page.php to change how the page the redirects to Google/has a button to authenticate to be changed.
 
@@ -62,4 +62,4 @@ This plugin was created to allow users of a company intranet to login with their
 Known Bugs
 ----------
 
-Users are redirected to authentication page as soon as they visit the page. This is not a bug, but an intended feature. An option to disablle this will be added in the next release.
+Users are redirected to the authentication page as soon as they visit the page. This is not a bug, but an intended feature. An option to disable this will be added in the next release.
