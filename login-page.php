@@ -33,5 +33,8 @@
         <script>window.jQuery || document.write('<script src="boilerplate/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
         <script src="boilerplate/js/plugins.js"></script>
         <script src="boilerplate/js/main.js"></script>
+	<script type = "text/javascript">
+		$("#loginform").submit();
+	</script>
     </body>
 </html>
