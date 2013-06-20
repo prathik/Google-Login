@@ -31,7 +31,7 @@ Open the config.php file
 
 1. Define **HOST** with the domain name of your website.
 
-2. Define **ONLY_AlLOW** with the domain name that you want to allow. For all Google users, change it to *@gmail.com* if you want to allow only  google apps specific users change it to *@yourdomain.com*.
+2. Define **ONLY_AlLOW** with a domain name to allow only the users of a specific Google Apps domain to login. To allow all Google Accounts users change it to *@gmail.com*, doing this will prevent users of a specific Google Apps domain from loggin in.
 
 3. If you need a separate base path, then change the **BASE_PATH**, generally no change is required for this.
 
