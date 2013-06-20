@@ -21,6 +21,10 @@ Open the config.php file
 2. Define **ONLY_AlLOW** with the domain name that you want to allow. For all Google users, change it to *@gmail.com* if you want to allow only  google apps specific users change it to *@yourdomain.com*.
 3. If you need a seperate base path, then change the **BASE_PATH**, generally no change is required for this.
 
+Edit login-page.php to change how the page the redirects to Google/has a button to authenticate to be changed.
+
+Edit invalid-email.php to change the error message which comes when the user logs in with the wrong email id.
+
 Updating
 --------
 
@@ -34,7 +38,7 @@ Prathik Raj
 Feature Request/Bugs
 --------------------
 
-Mail me or add a comment
+Mail me or add a comment.
 
 History
 -------

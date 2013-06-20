@@ -25,7 +25,12 @@ License: Free to use, copy, modify and distribute
 */
 
 	add_action( "template_redirect", "redirect_to_login");
-	add_action( "login_head", "redirect_to_login" );
+	add_action( "login_head", "login_page_redirect" );
+
+	function login_page_redirect() {
+		wp_redirect("wp-content/plugins/Google-Login/loginout.php");
+	}
+
 	function redirect_to_login() {
 		
 		if(!is_user_logged_in()){

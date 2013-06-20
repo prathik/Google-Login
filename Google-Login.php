@@ -56,7 +56,7 @@ try {
 	} else if (is_user_logged_in()) {
 		echo "User logged in";
 	} else {
-		echo "Inmobi emails only";
+		require("invalid-email.php");
 	}
 
     }
