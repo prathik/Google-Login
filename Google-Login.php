@@ -33,8 +33,6 @@ try {
 		wp_set_current_user( $user->ID );
 	    }
 	    else {
-		    //echo "Email does not exist";
-		    //var_dump($attributes);
 		    $userdata = array();
 		    $userdata['user_pass'] = "common_password";
 		    $userdata['user_login'] = str_replace( "@inmobi.com", "", $attributes["contact/email"] );
@@ -54,7 +52,7 @@ try {
 		header("Location: $site_url");
 		ob_end_clean();
 	} else if (is_user_logged_in()) {
-		echo "User logged in";
+		require("loginout.php");
 	} else {
 		require("invalid-email.php");
 	}
