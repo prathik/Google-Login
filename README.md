@@ -3,7 +3,7 @@ Google-Login
 
 Login into your Wordpress Blog using Google credentials. This project uses LightOpenId (http://gitorious.org/lightopenid).
 
-As soon as a visitor enters your website, they will be redirected to the authentication page, and after they authenticate they will be logged into your website.
+As soon as a visitor enters your website they will be redirected to the authentication page, after they authenticate they will be redirected to the homepage.
 
 Users can alternatively login from /wp-content/plugins/Google-Login/userlogin.php.
 
@@ -59,9 +59,9 @@ Mail me or add a comment.
 History
 -------
 
-This plugin was created to allow users of a company intranet to login with their Google Apps credentials. As soon as one gets to the Wordpress website, they are redirected to the prompt page, and if they provide the credentials and the permissions, they are logged in.
+This plugin was created to allow users of a company intranet to login with their Google Apps credentials. As soon as one gets to the Wordpress website they are redirected to the prompt page, and if they provide the credentials and the permissions they are logged in.
 
 Known Bugs
 ----------
 
-Users are redirected to the authentication page as soon as they visit the page. This is not a bug, but an intended feature. An option to disable this will be added in the next release.
+Users are redirected to the authentication page as soon as they visit the page. This is not a bug but an intended feature. An option to disable this will be added in the next release.
