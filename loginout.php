@@ -10,7 +10,7 @@ require(BASE_PATH."/wp-load.php");
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>Login/Logout</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
@@ -18,6 +18,7 @@ require(BASE_PATH."/wp-load.php");
 
         <link rel="stylesheet" href="boilerplate/css/normalize.css">
         <link rel="stylesheet" href="boilerplate/css/main.css">
+	<link rel="stylesheet" href="style.css">
         <script src="boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -26,6 +27,7 @@ require(BASE_PATH."/wp-load.php");
         <![endif]-->
 
         <!-- Add your site or application content here -->
+	<div id = "container">
         <h1>Login/Logout</h1>
 	<?php if(! is_user_logged_in() ) { ?>
 	<p>Please click <a href ="<?php echo site_url(); ?>">here</a> to login.</p>
@@ -33,6 +35,7 @@ require(BASE_PATH."/wp-load.php");
 	<?php } else { ?>
 	<p>You are logged in, click <a href = "<?php echo wp_logout_url(); ?>">here</a> to logout.</p>
 	<?php } ?>
+	</div> <!-- #container -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="boilerplate/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
         <script src="boilerplate/js/plugins.js"></script>
