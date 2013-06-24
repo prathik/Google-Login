@@ -5,6 +5,8 @@ Login into your Wordpress Blog using Google credentials. This project uses Light
 
 As soon as a visitor enters your website, they will be redirected to the authentication page, and after they authenticate they will be logged into your website.
 
+Users can alternatively login from /wp-content/plugins/Google-Login/userlogin.php.
+
 Usecase
 -------
 
@@ -27,7 +29,7 @@ Clone the project in Wordpress plugins directory. Go to Wordpress admin panel an
 Configuration
 -------------
 
-Open the config.php file
+Copy config.sample as config.php, open the config.php file
 
 1. Define **HOST** with the domain name of your website.
 
