@@ -8,7 +8,8 @@ if(isset($_POST['log']) && isset($_POST['pwd']) && isset($_POST['login'])) {
 	$user = wp_signon($cred);
 	if ( is_wp_error($user) )
    		$error = $user->get_error_message();
-	wp_redirect(site_url());
+	else
+		wp_redirect(site_url());
 	
 }
 ?>
