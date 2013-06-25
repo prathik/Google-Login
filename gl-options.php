@@ -22,7 +22,7 @@ function gl_login_options() {
 
 	add_settings_field(
 		'gl_required',
-		'Is login required?',
+		'No login?',
 		'gl_required_callback',
 		'gl_options_main',
 		'gl_main_settings'
@@ -39,7 +39,7 @@ function gl_required_callback() {
 
 	$options = get_option( 'gl_options_main' );
 	$html = '<input type = "checkbox" id = "gl_required" name = "gl_options_main[gl_required]" value = "1" '.checked(1,$options["gl_required"],false) . '/>';
-	$html .= '<label for = "gl_requried"> Should users login to view your website? </label>';
+	$html .= '<label for = "gl_requried">Allow users to view website without logging in.</label>';
 
 	echo $html;
 
@@ -62,6 +62,10 @@ function gl_settings_page() { ?>
 	<?php submit_button(); ?>
 
 </form>
+<h2>Login page url</h2>
+<p>You can use the below link to allow users to login incase the user can view the content without logging in.</p>
+<h3>Paste the below HTML to give a login link</h3>
+<textarea rows="5" cols="80"> &lt;a href = &quot;<?php echo site_url(); ?>/wp-content/plugins/Google-Login/Google-Login.php&quot;&gt;Login using your Google Account&lt;/a&gt;</textarea>	
 </div>
 
 <?php } ?>
