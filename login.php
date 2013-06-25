@@ -23,8 +23,13 @@ License: Free to use, copy, modify and distribute
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 */
+	include("gl-options.php");
+	$options = get_option('gl_options_main');
 
-	add_action( "template_redirect", "redirect_to_login");
+
+	if($options['gl_required'] == 1) {	
+		add_action( "template_redirect", "redirect_to_login");
+	}
 	add_action( "login_head", "login_page_redirect" );
 
 	function login_page_redirect() {

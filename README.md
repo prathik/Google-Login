@@ -3,7 +3,7 @@ Google-Login
 
 Login into your Wordpress Blog using Google credentials. This project uses LightOpenId (http://gitorious.org/lightopenid).
 
-As soon as a visitor enters your website they will be redirected to the authentication page, after they authenticate they will be redirected to the homepage.
+The plugin in can be configured such that a user must login before viewing your website, as soon as a visitor enters your website they will be redirected to the authentication page, after they authenticate they will be redirected to the homepage.
 
 Users can alternatively login from /wp-content/plugins/Google-Login/userlogin.php.
 
@@ -40,6 +40,8 @@ Copy config.sample as config.php, open the config.php file
 Edit login-page.php to change how the page the redirects to Google/has a button to authenticate to be changed.
 
 Edit invalid-email.php to change the error message which comes when the user logs in with the wrong email id.
+
+To enforce login go to the settings page of Google Login (present under the plugins tab in Wordpress Admin menu) and check the **Is login required?** checkbox.
 
 Updating
 --------
