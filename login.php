@@ -26,20 +26,14 @@ License: Free to use, copy, modify and distribute
 	include("gl-options.php");
 	$options = get_option('gl_options_main');
 	
-	/*register_activation_hook( __FILE__, 'gl_activated' );
-	
-	function gl_activated() {
-
-		$options = get_option('gl_options_main');
-		$options["gl_required"] = 1;
-		update_option( 'gl_options_main', $options );
-
-	}*/
 
 	if($options['gl_required'] == false) {	
 		add_action( "template_redirect", "redirect_to_login");
 	}
-	add_action( "login_head", "login_page_redirect" );
+	
+	if($options['gl_override'] == false) {
+		add_action( "login_head", "login_page_redirect" );
+	}
 
 	function login_page_redirect() {
 		wp_redirect("wp-content/plugins/Google-Login/loginout.php");

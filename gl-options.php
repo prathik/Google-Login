@@ -27,12 +27,28 @@ function gl_login_options() {
 		'gl_options_main',
 		'gl_main_settings'
 		);
+	
+	add_settings_field(
+		'gl_override',
+		'Prevent override',
+		'gl_override_callback',
+		'gl_options_main',
+		'gl_main_settings'
+		);
 
 	register_setting ( 
 			'gl_options_main',
 			'gl_options_main'
 			);
 
+}
+
+function gl_override_callback() {
+        $options = get_option( 'gl_options_main' );
+        $html = '<input type = "checkbox" id = "gl_override" name = "gl_options_main[gl_override]" value = "1" '.checked(1,$options["gl_override"],false) . '/>';
+        $html .= '<label for = "gl_override">By default the default Wordpress login page is overriden. Check this to show default Wordpress login page (<strong>wp-login.php</strong>).</label>';
+
+        echo $html;
 }
 
 function gl_required_callback() {
