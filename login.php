@@ -36,7 +36,11 @@ License: Free to use, copy, modify and distribute
 	}
 
 	function login_page_redirect() {
-		wp_redirect("wp-content/plugins/Google-Login/loginout.php");
+		if(!is_user_logged_in) {
+			wp_redirect("wp-content/plugins/Google-Login/loginout.php");
+		} else {
+			wp_redirect(site_url());
+		}
 	}
 
 	function redirect_to_login() {
