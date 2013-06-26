@@ -1,6 +1,10 @@
 <?php
 require 'config.php';
 require(BASE_PATH."/wp-load.php");
+
+if(is_user_logged_in()) {
+	wp_redirect(site_url());
+}
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -29,12 +33,8 @@ require(BASE_PATH."/wp-load.php");
         <!-- Add your site or application content here -->
 	<div id = "container">
         <h1>Login/Logout</h1>
-	<?php if(! is_user_logged_in() ) { ?>
 	<p>Please click <a href ="<?php echo site_url(); ?>/wp-content/plugins/Google-Login/Google-Login.php">here</a> to login.</p>
 	<p>Logging out here does not log you out from your Google Account. To logout from your Google Account click <a href="http://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=<?php echo site_url(); ?>">here</a>.</p>
-	<?php } else { ?>
-	<p>You are logged in, click <a href = "<?php echo wp_logout_url(); ?>">here</a> to logout.</p>
-	<?php } ?>
 	</div> <!-- #container -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="boilerplate/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>

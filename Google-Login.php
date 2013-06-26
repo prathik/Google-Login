@@ -5,6 +5,10 @@ require 'lightopenid/openid.php';
 require 'config.php';
 
 require(BASE_PATH."/wp-load.php");
+
+if( is_user_logged_in() ) {
+	wp_redirect(site_url());
+}
 try {
     # Change 'localhost' to your domain name.
     $openid = new LightOpenID(HOST);
@@ -24,7 +28,7 @@ try {
 	$attributes = $openid->getAttributes();
 
 	//Insert $openid->validate()
-	if(strpos($attributes["contact/email"], ONLY_ALLOW)!==false && !is_user_logged_in()) {	
+	if(strpos($attributes["contact/email"], ONLY_ALLOW)!==false) {	
     	    //echo 'User ' . ($openid->validate() ? $openid->identity . ' has ' : 'has not ') . 'logged in.';
 	    	
 	    if( email_exists($attributes["contact/email"]) ) {
@@ -47,12 +51,7 @@ try {
 		    
 	    }
 		$site_url = site_url();
-		var_dump($site_url);
-		ob_start();
 		header("Location: $site_url");
-		ob_end_clean();
-	} else if (is_user_logged_in()) {
-		require("loginout.php");
 	} else {
 		require("invalid-email.php");
 	}
